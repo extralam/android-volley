@@ -16,6 +16,7 @@
 
 package com.android.volley;
 
+import android.R.integer;
 import android.net.TrafficStats;
 import android.net.Uri;
 import android.os.Handler;
@@ -497,6 +498,16 @@ public abstract class Request<T> implements Comparable<Request<T>> {
         return volleyError;
     }
 
+    
+    /**
+     * Return the progress of the download
+     * @param response
+     * @return long[] , long[0] = size of file downloaded , int[1] = file size
+     */
+    public long[] progressResponse(long[] response){
+    	return response;
+    }
+    
     /**
      * Subclasses must implement this to perform delivery of the parsed
      * response to their listeners.  The given response is guaranteed to

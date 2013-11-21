@@ -101,6 +101,7 @@ public class CacheDispatcherTest extends TestCase {
         Request request = mNetworkQueue.take();
         assertSame(entry, request.getCacheEntry());
     }
+    
 
     // An expired cache hit does not post a response and queues to the network.
     public void testExpiredCacheHit() throws Exception {
